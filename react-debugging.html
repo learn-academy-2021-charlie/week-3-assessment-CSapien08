@@ -80,10 +80,10 @@
           }
           return(
             <>
-              <button onClick={this.drawCard}>
+              <button onClick={this.props.drawCard}>
                 Click to Draw a Card
               </button>
-              <button onClick={this.shuffle}>
+              <button onClick={this.props.shuffle}>
                 Return Cards and Shuffle Deck
               </button>
               <div style={handStyles}>

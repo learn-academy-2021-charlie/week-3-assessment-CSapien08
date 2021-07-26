@@ -19,7 +19,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer: Yarn is a package manager like npm but better.
 
-  Researched answer: Yarn or 'Yet Another Resource Negotiator' helps manage project dependencies like Jest for example. I belive they modify the yarn.lock file.
+  Researched answer: Yarn or 'Yet Another Resource Negotiator' helps manage project dependencies like Jest for example. I belive they modify the yarn.lock file and the package.json
 
 
 
@@ -27,7 +27,9 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer: Props or properties allow users to pass information to a Components.
 
-  Researched answer: React Props are function arguements and then attributes in HTML via attributes
+  Researched answer: React Props are function arguements and then attributes in HTML via attributes.
+
+  They are global objects, pass information in one directional flow from parent to child 
 
 
 
@@ -43,7 +45,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer: Not sure, maybe the DOM changes whenever there is an event fired off, like a mouse click.
 
-  Researched answer: DOM events is a way to handle events like a mouse click or form being submitted, it is a signal to let the DOM know something is occuring.
+  Researched answer: DOM events is a way to handle events from a user like a mouse click or form being submitted, it is a signal to let the DOM know something is occuring.
 
 
 
@@ -51,7 +53,7 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
   Your answer: An anonymous function is a function that does not have a name or it is declared without a name. I see it mainly being used as a shortcut inside of already defined functions.
 
-  Researched answer: It is in face a function without a name. They are not accessible after it is declared and strange behavior happens when its used by itself and not inside a defined funtion.
+  Researched answer: It is in fact a function without a name. They are not accessible after it is declared and strange behavior happens when its used by itself and not inside a defined funtion.
 
 
 ## Looking Ahead: Terms for Next Week

@@ -45,9 +45,10 @@ describe("fibonacciFunction", () => {
 
 //Create a function called fibonaccitFunction
 //  parameters - a integer
+//  initialize a new array of length based on arguement
 //  check to make sure the arguement is greater than two
 //      if true then return an array containing the Fibonacci sequence for that number
-//      else return 'invaild arguement'
+//      if not return 'invaild arguement'
 //END
 
 const fibonacciFunction = (int) => {
@@ -130,7 +131,6 @@ so I will ask you in the moring.
 */
 
 
-
 // a) Create a test with expect statements for each of the variables provided.
 
 //Create a test function.
@@ -139,15 +139,6 @@ so I will ask you in the moring.
 //      within it() write the test using expect and toEquals
 //      test to make sure it returns the expected output
 //END
-
-describe("accumalte", () => {
-    it("Takes in an array and returns an array of the accumulating sum.", () => {
-        //expect(accumalte(numbersToAdd1)).toEqual([2, 6, 51, 60])
-        //expect(accumalte(numbersToAdd2)).toEqual([0, 7, -1, 11])
-        //expect(accumalte(numbersToAdd3)).toEqual([])
-        expect(accumalte(numbersToAdd1)).toEqual([2, 6, 51, 60])
-    })
-})
 
 var numbersToAdd1 = [2, 4, 45, 9]
 // Excpected output: [2, 6, 51, 60]
@@ -158,6 +149,14 @@ var numbersToAdd2 = [0, 7, -8, 12]
 var numbersToAdd3 = []
 // Expected output: []
 
+describe("accumalte", () => {
+    it("Takes in an array and returns an array of the accumulating sum.", () => {
+        expect(accumalte(numbersToAdd1)).toEqual([2, 6, 51, 60])
+        expect(accumalte(numbersToAdd2)).toEqual([0, 7, -1, 11])
+        expect(accumalte(numbersToAdd3)).toEqual([])
+    })
+})
+
 // b) Create the function that makes the test pass.
 
 //Create a function called accumlate
@@ -167,32 +166,47 @@ var numbersToAdd3 = []
 //      if there isn't a current value then add 0
 //  return the array
 
-// const accumalte = (array) => {
-//     return array.map((value, index, arr) => {
-//         if(index === 0){
-//             return value;
-//         }
-//         else{
-//             arr[index] = arr[index] + arr[index - 1]
-//             value = arr[index]
-//             return value
-//         }
-//     })
-// }
 const accumalte = (array) => {
-    var temp = []
-    for(let i = 0; i < array.length; i++){
-        if(i == 0){
-            temp[i] = array[i];
+    if(array.length < 1){
+        return []
+    }
+    return array.map((value, index, arr) => {
+        if(index === 0){
+            return value;
         }
         else{
-            array[i] = array[i] + array[i - 1]
-            temp[i] = array[i]
-              
+            arr[index] = arr[index] + arr[index - 1]
+            value = arr[index]
+            return value
         }
-    }
-    return temp
+    })
 }
+
+// const accumalte = (array2) => {
+//     var temp = []
+//     for(let i = 0; i < array2.length; i++){
+//         if(i == 0){
+//             temp[i] = array2[i];
+//         }
+//         else{
+//             array2[i] = array2[i] + array2[i - 1]
+//             temp[i] = array2[i]
+//         }
+//     }
+//     return temp
+// }
+
+//FROM THE REVIEW
+// const accumalte = (array) => {
+//     if(array.length > 0){
+//         let arraysum = [array[0]]
+//         for(let i=1; i < array.length; i++){
+//             arraysum.push(array[i] + arraysum[i-1])
+//         }
+//         return arraysum
+//     }
+//     return []
+// }
 console.log(accumalte(numbersToAdd1))
 console.log(accumalte(numbersToAdd2))
 console.log(accumalte(numbersToAdd3))
